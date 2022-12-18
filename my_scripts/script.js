@@ -85,25 +85,27 @@ function filterTodo(event){
             function filterList(){
                 var filterInput  = document.querySelector(".filter-input");
                 
-                console.log("method works!")
-                console.log("filterInput:", filterInput.value);
+                // console.log("method works!")
+                // console.log("filterInput:", filterInput.value);
 
                 const todos = todoList.childNodes;
                 todos.forEach(function (todoItem){
 
-                    console.log("inside forEach:", todos.outerText);
+                    const itemText = todoItem.querySelector(".todo-item").innerText
 
-                    if(todos.includes(filterInput))
+                    // console.log("inside forEach:", itemText);
+
+                    if(itemText.includes(filterInput.value))
                     {
-                        todos.style.display="flex";
+                        todoItem.style.display="flex";
                     } 
                     else
                     {
-                        todos.style.display="none";
+                        todoItem.style.display="none";
                     }
                 });
             }
-
+ 
 
     // function filterList(){
     //     const todos = todoList.childNodes;

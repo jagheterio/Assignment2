@@ -31,7 +31,7 @@
             </div>
 
             <div class="select">
-                <label>Filter by</label>
+                <label>Filter by situation</label>
                 <select name="todos" class="filter-todo">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
@@ -41,16 +41,15 @@
         </form>
 
         <div class="todo-container">
-            <div class="select">
                 <form action="">
-                    <label>Filter by</label>
+                    <div class="input">
+                    <label>Filter by activity</label>
                     <input type="text" class="filter-input" onkeyup ="filterList()">
+                    </div>
                 </form>
-            </div>
             <p>Todo List</p>
             <ul class="todo-list"></ul>
             <!-- list will be generated from form-->
-           
         </div>
     </div><!--/.form-container-->
 
